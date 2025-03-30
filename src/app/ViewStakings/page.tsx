@@ -44,9 +44,9 @@ export default function Home() {
       // Optionally, refresh the data after withdrawal
       const updatedEntries = await fetchStakings();
       setStakingEntries(updatedEntries);
-    } catch (error: any) {
-      console.error("Error during withdrawal:", error.message || error);
-      alert(error.message || "Failed to withdraw. Check console for details.");
+    } catch (error) {
+      console.error("Error during withdrawal:", error);
+      alert("Failed to withdraw. Check console for details.");
     } finally {
       setWithdrawing(null);
     }
