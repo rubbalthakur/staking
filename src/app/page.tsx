@@ -52,12 +52,9 @@ export default function Home() {
       alert(
         `Successfully entered Pool ID ${poolId} with ${poolInputs.entry} tokens!`
       );
-    } catch (error: any) {
-      console.error("Error entering staking pool:", error.message || error);
-      alert(
-        error.message ||
-          "Failed to enter the staking pool. Check console for details."
-      );
+    } catch (error) {
+      console.error("Error entering staking pool:", error);
+      alert("Failed to enter the staking pool. Check console for details.");
     }
   };
 
