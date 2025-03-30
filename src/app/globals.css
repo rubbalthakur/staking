@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: #1d1e24;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container Styles */
+.lottery-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.lottery-container h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* List Styles */
+.lottery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Box Styling */
+.lottery-item {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 25px 20px;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.lottery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Styling */
+.lottery-id,
+.lottery-prize {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fdfdfd;
+  margin-bottom: 8px;
+}
+
+.lottery-id span,
+.lottery-prize span {
+  color: #00e676;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.enter-button {
+  background-color: #00e676;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enter-button:hover {
+  background: #0056b3;
+  color: white;
+}
+
+/* Header Styles */
+header {
+  background-color: transparent;
+  padding: 15px 0;
+  /* position: fixed; */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #ffffff33;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-icon,
+.user-icon svg {
+  color: white;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active,
+.main-nav a.active-page {
+  color: #00e676;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-icon,
+.user-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sign-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.sign-in,
+.sign-up {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.sign-in {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sign-up {
+  background-color: #00e676;
+  color: #0f0a27;
+}
+
+.sign-in:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sign-up:hover {
+  background-color: #00c853;
+}
+
+
+
+/* --------------------------buy token---------------- */
+
+.buy-page {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.buy-page h1 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.buy-page h1:first-child {
+  margin-top: 0px;
+}
+
+.buy-page input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid rgba(64, 226, 64, 0.37);
+  border-radius: 5px;
+  font-size: 16px;
+  color: white;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.buy-page button {
+  flex: 1;
+  margin: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #00e676;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.buy-page button:hover {
+  background: #00c853;
+}
